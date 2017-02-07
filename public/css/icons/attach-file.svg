@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="44px" viewBox="0 0 22 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SketchAppSources.com" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Material-Icons" transform="translate(-247.000000, -7962.000000)" fill="#000000">
+            <g id="editor" transform="translate(235.000000, 7960.000000)">
+                <path d="M31,12 L31,35 C31,39.42 27.42,43 23,43 C18.58,43 15,39.42 15,35 L15,10 C15,7.24 17.24,5 20,5 C22.76,5 25,7.24 25,10 L25,31 C25,32.1 24.1,33 23,33 C21.9,33 21,32.1 21,31 L21,12 L18,12 L18,31 C18,33.76 20.24,36 23,36 C25.76,36 28,33.76 28,31 L28,10 C28,5.58 24.42,2 20,2 C15.58,2 12,5.58 12,10 L12,35 C12,41.08 16.92,46 23,46 C29.08,46 34,41.08 34,35 L34,12 L31,12 L31,12 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

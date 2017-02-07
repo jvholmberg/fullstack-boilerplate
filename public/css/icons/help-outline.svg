@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SketchAppSources.com" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Material-Icons" transform="translate(-632.000000, -1576.000000)" fill="#000000">
+            <g id="action" transform="translate(233.000000, 580.000000)">
+                <path d="M417,1028 L421,1028 L421,1024 L417,1024 L417,1028 L417,1028 Z M419,996 C407.96,996 399,1004.96 399,1016 C399,1027.04 407.96,1036 419,1036 C430.04,1036 439,1027.04 439,1016 C439,1004.96 430.04,996 419,996 L419,996 Z M419,1032 C410.18,1032 403,1024.82 403,1016 C403,1007.18 410.18,1000 419,1000 C427.82,1000 435,1007.18 435,1016 C435,1024.82 427.82,1032 419,1032 L419,1032 Z M419,1004 C414.58,1004 411,1007.58 411,1012 L415,1012 C415,1009.8 416.8,1008 419,1008 C421.2,1008 423,1009.8 423,1012 C423,1016 417,1015.5 417,1022 L421,1022 C421,1017.5 427,1017 427,1012 C427,1007.58 423.42,1004 419,1004 L419,1004 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
