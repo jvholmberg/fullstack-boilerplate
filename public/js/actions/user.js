@@ -1,43 +1,31 @@
 'use strict';
 
 import axios from 'axios';
+import { browserHistory } from 'react-router';
 
-export function register(username, password, password2) {
-  return (dispatch) => {
-    axios.post('/user/register', {
-      username: username,
-      password: password,
-      password2: password2
-    }).then((res) => {
-        dispatch({
-          type: 'REGISTER_USER_FULFILLED',
-          payload: res.data
-        });
-      })
-      .catch((err) => {
-        dispatch({
-          type: 'REGISTER_USER_REJECTED',
-          payload: res.data
-        });
-      });
-  };
+export function register(dataObj) {
+  axios.post('/user/register', dataObj).then((res) => {
+      browserHistory.push('/login');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
-export function login(username, password) {
+export function login(dataObj) {
   return (dispatch) => {
-    axios.post('/user/login', {
-      username: username,
-      password: password
-    }).then((res) => {
+    dispatch({ type: 'LOGIN_USER' });
+    axios.post('/user/login', dataObj).then((res) => {
       dispatch({
         type: 'LOGIN_USER_FULFILLED',
         payload: res.data
       });
+      browserHistory.push('/dashboard');
       })
       .catch((err) => {
         dispatch({
           type: 'LOGIN_USER_REJECTED',
-          payload: res.data
+          payload: err
         });
       });
   };

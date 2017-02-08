@@ -39,14 +39,13 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login',
-  passport.authenticate('local', { failWithError: true }),
-  (req, res) => {
-    console.log(req.user);
-    return res.json(getProfile(req.user));
-  },
-  (err, req, res) => {
-    return res.json(err);
-  }
+  passport.authenticate('local', { failWithError: false }),
+    (req, res) => {
+      return res.json(getProfile(req.user));
+    },
+    (err, req, res) => {
+      return res.json(err);
+    }
 );
 
 router.post('/logout', (req, res) => {

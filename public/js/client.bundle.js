@@ -29277,18 +29277,15 @@
 	  var action = arguments[1];
 
 	  switch (action.type) {
-	    case 'REGISTER_USER':
 	    case 'LOGIN_USER':
 	    case 'FETCH_USER':
 	      return _extends({}, state, { fetching: true
 	      });
-	    case 'REGISTER_USER_REJECTED':
 	    case 'LOGIN_USER_REJECTED':
 	    case 'FETCH_USER_REJECTED':
 	      return _extends({}, state, { fetching: false,
 	        error: action.payload
 	      });
-	    case 'REGISTER_USER_FULFILLED':
 	    case 'LOGIN_USER_FULFILLED':
 	    case 'FETCH_USER_FULFILLED':
 	      return _extends({}, state, { fetching: false,
@@ -37072,42 +37069,31 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
+	var _reactRouter = __webpack_require__(172);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function register(username, password, password2) {
-	  return function (dispatch) {
-	    _axios2.default.post('/user/register', {
-	      username: username,
-	      password: password,
-	      password2: password2
-	    }).then(function (res) {
-	      dispatch({
-	        type: 'REGISTER_USER_FULFILLED',
-	        payload: res.data
-	      });
-	    }).catch(function (err) {
-	      dispatch({
-	        type: 'REGISTER_USER_REJECTED',
-	        payload: res.data
-	      });
-	    });
-	  };
+	function register(dataObj) {
+	  _axios2.default.post('/user/register', dataObj).then(function (res) {
+	    _reactRouter.browserHistory.push('/login');
+	  }).catch(function (err) {
+	    console.log(err);
+	  });
 	}
 
-	function login(username, password) {
+	function login(dataObj) {
 	  return function (dispatch) {
-	    _axios2.default.post('/user/login', {
-	      username: username,
-	      password: password
-	    }).then(function (res) {
+	    dispatch({ type: 'LOGIN_USER' });
+	    _axios2.default.post('/user/login', dataObj).then(function (res) {
 	      dispatch({
 	        type: 'LOGIN_USER_FULFILLED',
 	        payload: res.data
 	      });
+	      _reactRouter.browserHistory.push('/dashboard');
 	    }).catch(function (err) {
 	      dispatch({
 	        type: 'LOGIN_USER_REJECTED',
-	        payload: res.data
+	        payload: err
 	      });
 	    });
 	  };
@@ -38887,7 +38873,11 @@
 	    key: '_formSubmit',
 	    value: function _formSubmit(e) {
 	      e.preventDefault();
-	      this.props.dispatch((0, _user.register)(document.getElementsByName('username')[0].value, document.getElementsByName('password')[0].value, document.getElementsByName('password2')[0].value, document.getElementsByName('displayName')[0].value));
+	      var dataObj = {};
+	      ['username', 'password', 'password2', 'displayName'].map(function (fieldName) {
+	        dataObj[fieldName] = document.getElementsByName(fieldName)[0].value;
+	      });
+	      (0, _user.register)(dataObj);
 	    }
 	  }, {
 	    key: 'render',
@@ -39001,7 +38991,11 @@
 	    key: '_formSubmit',
 	    value: function _formSubmit(e) {
 	      e.preventDefault();
-	      this.props.dispatch((0, _user.login)(document.getElementsByName('username')[0].value, document.getElementsByName('password')[0].value));
+	      var dataObj = {};
+	      ['username', 'password'].map(function (fieldName) {
+	        dataObj[fieldName] = document.getElementsByName(fieldName)[0].value;
+	      });
+	      this.props.dispatch((0, _user.login)(dataObj));
 	    }
 	  }, {
 	    key: 'render',

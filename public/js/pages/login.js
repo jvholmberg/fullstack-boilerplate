@@ -18,13 +18,14 @@ export default class Login extends React.Component {
     super(props);
     this._formSubmit = this._formSubmit.bind(this);
   }
-  
+
   _formSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(login(
-      document.getElementsByName('username')[0].value,
-      document.getElementsByName('password')[0].value
-    ));
+    let dataObj = {};
+    ['username', 'password'].map((fieldName) => {
+      dataObj[fieldName] = document.getElementsByName(fieldName)[0].value;
+    });
+    this.props.dispatch(login(dataObj));
   }
 
   render() {

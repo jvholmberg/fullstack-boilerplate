@@ -21,12 +21,11 @@ export default class Register extends React.Component {
 
   _formSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(register(
-      document.getElementsByName('username')[0].value,
-      document.getElementsByName('password')[0].value,
-      document.getElementsByName('password2')[0].value,
-      document.getElementsByName('displayName')[0].value
-    ));
+    let dataObj = {};
+    ['username', 'password', 'password2', 'displayName'].map((fieldName) => {
+      dataObj[fieldName] = document.getElementsByName(fieldName)[0].value;
+    });
+    register(dataObj);
   }
 
   render() {
