@@ -86,7 +86,7 @@
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _logout = __webpack_require__(350);
+	var _logout = __webpack_require__(353);
 
 	var _logout2 = _interopRequireDefault(_logout);
 
@@ -38963,6 +38963,10 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
+	var _InputGroup = __webpack_require__(350);
+
+	var _InputGroup2 = _interopRequireDefault(_InputGroup);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39015,18 +39019,8 @@
 	              null,
 	              'Login'
 	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              'Email',
-	              _react2.default.createElement('input', { className: 'form-control', type: 'text', name: 'username' })
-	            ),
-	            _react2.default.createElement(
-	              'label',
-	              null,
-	              'Password',
-	              _react2.default.createElement('input', { className: 'form-control', type: 'password', name: 'password' })
-	            ),
+	            _react2.default.createElement(_InputGroup2.default, { title: 'Username', name: 'username' }),
+	            _react2.default.createElement(_InputGroup2.default, { title: 'Password', name: 'password' }),
 	            _react2.default.createElement(
 	              'button',
 	              { className: 'btn primary2' },
@@ -39044,6 +39038,198 @@
 
 /***/ },
 /* 350 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _constants = __webpack_require__(351);
+
+	var _Set = __webpack_require__(352);
+
+	var _Set2 = _interopRequireDefault(_Set);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Exercise = function (_React$Component) {
+	  _inherits(Exercise, _React$Component);
+
+	  function Exercise(props) {
+	    _classCallCheck(this, Exercise);
+
+	    return _possibleConstructorReturn(this, (Exercise.__proto__ || Object.getPrototypeOf(Exercise)).call(this, props));
+	  }
+
+	  _createClass(Exercise, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'component_input_group_root' },
+	        _react2.default.createElement(
+	          'label',
+	          { className: 'component_input_group_label' },
+	          this.props.title,
+	          _react2.default.createElement('input', {
+	            className: 'component_input_group_input form-control',
+	            type: 'text',
+	            name: this.props.name })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Exercise;
+	}(_react2.default.Component);
+
+	exports.default = Exercise;
+
+/***/ },
+/* 351 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = {
+	  State: {
+	    CREATE: 'CREATE_STATE',
+	    READ: 'READ_STATE',
+	    UPDATE: 'UPDATE_STATE',
+	    DELETE: 'DELETE_STATE'
+	  },
+	  ClassNames: {
+	    Root: 'standard_root',
+	    Header: 'standard_header',
+	    Body: 'standard_body',
+	    Section: 'standard_section',
+
+	    Workout: {
+	      Wrapper: 'workout_wrapper',
+	      Root: 'workout_root',
+	      Header: 'workout_header',
+	      Body: 'workout_body',
+	      Section: 'workout_section'
+	    },
+
+	    Exercise: {
+	      Wrapper: 'exercise_wrapper',
+	      Root: 'exercise_root',
+	      Header: 'exercise_header',
+	      Body: 'exercise_body',
+	      Section: 'exercise_section'
+	    }
+	  }
+	};
+
+/***/ },
+/* 352 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _constants = __webpack_require__(351);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Set = function (_React$Component) {
+	  _inherits(Set, _React$Component);
+
+	  function Set() {
+	    _classCallCheck(this, Set);
+
+	    return _possibleConstructorReturn(this, (Set.__proto__ || Object.getPrototypeOf(Set)).apply(this, arguments));
+	  }
+
+	  _createClass(Set, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col col6' },
+	          _react2.default.createElement('input', {
+	            type: 'text',
+	            onChange: this._repsOnChange.bind(this),
+	            className: 'form-control',
+	            defaultValue: this.props.data.reps,
+	            placeholder: 'Reps' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col col6' },
+	          _react2.default.createElement('input', {
+	            type: 'text',
+	            onChange: this._weightOnChange.bind(this),
+	            className: 'form-control',
+	            defaultValue: this.props.data.weight,
+	            placeholder: 'Weight' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: '_repsOnChange',
+	    value: function _repsOnChange(e) {
+	      this.props.data.reps = e.target.value;
+	      this.updateComponent();
+	    }
+	  }, {
+	    key: '_weightOnChange',
+	    value: function _weightOnChange(e) {
+	      this.props.data.weight = e.target.value;
+	      this.updateComponent();
+	    }
+	  }, {
+	    key: 'updateComponent',
+	    value: function updateComponent() {
+	      this.props.onUpdate(this.props.data);
+	    }
+	  }]);
+
+	  return Set;
+	}(_react2.default.Component);
+
+	exports.default = Set;
+
+/***/ },
+/* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { login } from '../actions/user';
 
 import Navbar from '../components/Navbar/';
+import InputGroup from '../components/InputGroup/';
 
 @connect((store) => {
   return {
@@ -35,14 +36,8 @@ export default class Login extends React.Component {
         <div>
           <form onSubmit={this._formSubmit}>
             <h1>Login</h1>
-            <label>
-              Email
-              <input className='form-control' type='text' name='username' />
-            </label>
-            <label>
-              Password
-              <input className='form-control' type='password' name='password' />
-            </label>
+            <InputGroup title='Username' name='username' />
+            <InputGroup title='Password' name='password' />
             <button className='btn primary2'>Login</button>
           </form>
         </div>

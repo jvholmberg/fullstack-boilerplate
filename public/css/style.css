@@ -380,3 +380,6 @@ nav {
   overflow: hidden; }
   .exercise_header button {
     float: right; }
+
+.component_input_group_root .component_input_group_label {
+  width: 100%; }
