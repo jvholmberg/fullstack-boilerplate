@@ -12,9 +12,13 @@ export default class Landing extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Navbar />
-        Landing
+        <div class="jumbotron">
+          <h1>Join now</h1>
+          <p>Start register your exercises to take your training to the next level. Its completely free, what do you got to lose</p>
+          <p><a class="btn btn-primary btn-lg">Sign up</a></p>
+        </div>
       </div>
     );
   }

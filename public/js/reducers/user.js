@@ -16,14 +16,12 @@ export default function reducer(state = {
     }
   }, action) {
     switch (action.type) {
-      case 'REGISTER_USER':
       case 'LOGIN_USER':
       case 'FETCH_USER':
         return {
           ...state
           , fetching: true
         };
-      case 'REGISTER_USER_REJECTED':
       case 'LOGIN_USER_REJECTED':
       case 'FETCH_USER_REJECTED':
         return {
@@ -31,7 +29,6 @@ export default function reducer(state = {
           , fetching: false
           , error: action.payload
         };
-      case 'REGISTER_USER_FULFILLED':
       case 'LOGIN_USER_FULFILLED':
       case 'FETCH_USER_FULFILLED':
         return {

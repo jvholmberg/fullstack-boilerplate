@@ -6,20 +6,19 @@ var passport = require('passport'),
 
 passport.use(new LocalStrategy(
   (username, password, done) => {
+
     User.findOne({
       username: username
     }, (err, user) => {
-      if (err) return done(err);
+      if (err) { return done(err); }
       if (!user) {
         return done(null, false, { message: 'User could not be found.' });
       }
-      bcrypt.compare(password, user.password,
-        (err, isMatch) => {
-        	if (err) return done(err);
-          if (!isMatch) return done(null, false, { message: 'Incorrect password.' });
+      bcrypt.compare(password, user.password)
+        .then((isMatch) => {
+          if (!isMatch) { return done(null, false, { message: 'Incorrect password.' }); }
           return done(null, user);
-        }
-      );
+        });
     });
   }
 ));
