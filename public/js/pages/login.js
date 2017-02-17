@@ -33,12 +33,12 @@ export default class Login extends React.Component {
     return (
       <div>
         <Navbar />
-        <div>
+        <div className='container'>
           <form onSubmit={this._formSubmit}>
             <h1>Login</h1>
             <InputGroup title='Username' name='username' />
             <InputGroup title='Password' name='password' />
-            <button className='btn primary2'>Login</button>
+            <button className='btn btn-primary'>Login</button>
           </form>
         </div>
       </div>

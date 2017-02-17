@@ -35,116 +35,8 @@ html {
 body {
   font-size: 1.4rem; }
 
-.form-control {
-  display: block;
-  width: 100%;
-  height: 3.4rem;
-  box-sizing: border-box;
-  padding: 1rem 1.2rem;
-  font-size: 1.4rem;
-  font-weight: 200;
-  line-height: 1.4rem;
-  white-space: nowrap;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: .1rem solid #ccc;
-  border-radius: .3rem;
-  -webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.075) 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.075) 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.075) 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1);
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
-
-.btn {
-  display: inline-block;
-  padding: 1rem;
-  margin: 0;
-  height: 3.4rem;
-  font-size: 1.4rem;
-  font-weight: 200;
-  line-height: 1.4rem;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border-radius: .3rem;
-  outline: 0;
-  border: none;
-  color: #FFFFFF;
-  text-decoration: none;
-  box-sizing: border-box; }
-  .btn:active {
-    -webkit-box-shadow: inset 0 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset 0 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0.2rem 0.1rem 0 rgba(0, 0, 0, 0.1); }
-  .btn.primary {
-    background: #3BAFDA; }
-    .btn.primary:hover {
-      background-color: #4FC1E9; }
-  .btn.success {
-    background: #8CC152; }
-    .btn.success:hover {
-      background-color: #A0D468; }
-  .btn.warning {
-    background: #F6BB42; }
-    .btn.warning:hover {
-      background-color: #FFCE54; }
-  .btn.danger {
-    background: #DA4453; }
-    .btn.danger:hover {
-      background-color: #ED5565; }
-  .btn.info {
-    background: #37BC9B; }
-    .btn.info:hover {
-      background-color: #48CFAD; }
-  .btn.normal {
-    background: #AAB2BD; }
-    .btn.normal:hover {
-      background-color: #CCD1D9; }
-  .btn.default {
-    color: #000000;
-    background: #FFFFFF; }
-    .btn.default:hover {
-      background-color: #CCD1D9; }
-  .btn.primary2 {
-    background: #2b9cf2; }
-    .btn.primary2:hover {
-      background-color: #0e83dc; }
-
-.alert {
-  display: block;
-  padding: 1.5rem;
-  width: 100%; }
-  .alert.primary {
-    background-color: #3BAFDA;
-    color: #FFFFFF; }
-  .alert.success {
-    background-color: #8CC152;
-    color: #FFFFFF; }
-  .alert.warning {
-    background-color: #F6BB42;
-    color: #FFFFFF; }
-  .alert.danger {
-    background-color: #DA4453;
-    color: #FFFFFF; }
-  .alert.info {
-    background-color: #37BC9B;
-    color: #FFFFFF; }
-  .alert.normal {
-    background-color: #AAB2BD;
-    color: #000000; }
-  .alert.default {
-    background-color: #FFFFFF;
-    color: #000000; }
+#app {
+  padding-top: 70px; }
 
 .icon {
   display: inline-block;
@@ -220,40 +112,6 @@ body {
     background-image: url(./icons/notification-none.svg); }
   .icon.send {
     background-image: url(./icons/send.svg); }
-
-.col {
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-.col1 {
-  width: 8.33%; }
-
-.col2 {
-  width: 16.66%; }
-
-.col3 {
-  width: 25%; }
-
-.col4 {
-  width: 33.33%; }
-
-.col6 {
-  width: 50%; }
-
-.col8 {
-  width: 66.66%; }
-
-.col9 {
-  width: 75%; }
-
-.col10 {
-  width: 83.33%; }
-
-.col12 {
-  width: 100%; }
 
 .mar-s {
   margin: 1rem; }
@@ -345,41 +203,6 @@ body {
 .bpad-l {
   padding-bottom: 3rem; }
 
-nav {
-  display: block;
-  width: 100%;
-  background-color: #333333; }
-  nav ul {
-    overflow: hidden; }
-    nav ul li {
-      display: block;
-      float: left; }
-      nav ul li a {
-        display: block;
-        padding: 1rem 3rem;
-        color: #FFFFFF;
-        text-decoration: none;
-        font-weight: 600; }
-
-.exercise_wrapper {
-  display: block;
-  width: 100%; }
-
-.exercise_root {
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 100%;
-  max-width: 50rem;
-  overflow: hidden;
-  border: 0.1rem solid #8C8C8C;
-  box-sizing: border-box; }
-
-.exercise_header {
-  padding-bottom: 1rem;
-  overflow: hidden; }
-  .exercise_header button {
-    float: right; }
-
 .component_input_group_root .component_input_group_label {
-  width: 100%; }
+  width: 100%;
+  font-size: 1.4rem; }

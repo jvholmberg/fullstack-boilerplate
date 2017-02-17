@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { register } from '../actions/user';
 
 import Navbar from '../components/Navbar/';
+import InputGroup from '../components/InputGroup/';
 
 @connect((store) => {
   return {
@@ -30,26 +31,14 @@ export default class Register extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Navbar />
         <h1>Register</h1>
         <form onSubmit={this._formSubmit}>
-          <label>
-            Name
-            <input className='form-control' type='text' name='displayName' />
-          </label><br/>
-          <label>
-            Email
-            <input className='form-control' type='text' name='username' />
-          </label><br/>
-          <label>
-            Password
-            <input className='form-control' type='password' name='password' />
-          </label><br/>
-          <label>
-            Confirm Password
-            <input className='form-control' type='password' name='password2' />
-          </label><br/>
+          <InputGroup title='Name' name='displayName' />
+          <InputGroup title='Username' name='username' />
+          <InputGroup title='Password' name='password' />
+          <InputGroup title='Confirm Password' name='2assword' />
           <button className='btn primary2'>Register</button>
         </form>
       </div>

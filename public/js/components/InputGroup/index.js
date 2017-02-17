@@ -1,8 +1,6 @@
 'use strict';
 
 import React from 'react';
-import { State } from '../../constants';
-import Set from '../Set/';
 
 export default class Exercise extends React.Component {
 
