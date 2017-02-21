@@ -3,23 +3,11 @@ import pubsub from 'pubsub-js';
 import { Dropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      pageTitle: ''
-    };
   }
-  componentWillMount() {
-    this.pubsub_token = pubsub.subscribe('setPageTitle', (ev, title) => {
-      this.setState({pageTitle: title});
-    });
-  }
-  componentWillUnmount() {
-    pubsub.unsubscribe(this.pubsub_token);
-  }
-
   _toggleSidebar(e) {
     e.preventDefault();
     e.target.parentElement.classList.toggle('active');
@@ -55,9 +43,8 @@ class Header extends React.Component {
               </a>
             </li>
           </ul>
-          <h2 className="header-title">{this.state.pageTitle}</h2>
-
-          <ul className="pull-right">
+          <h2 className="header-title">Title</h2>
+          {/* <ul className="pull-right">
             <li>
               <a href="#" className="ripple" onClick={this.showSearch}>
                 <em className="ion-ios-search-strong"></em>
@@ -91,12 +78,9 @@ class Header extends React.Component {
                 <em className="ion-gear-b"></em>
               </a>
             </li>
-          </ul>
-
+          </ul> */}
         </nav>
       </header>
     );
   }
 }
-
-export default Header;

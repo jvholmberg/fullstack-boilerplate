@@ -39633,6 +39633,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.default = undefined;
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -39662,29 +39663,10 @@
 	  function Header(props) {
 	    _classCallCheck(this, Header);
 
-	    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
-
-	    _this.state = {
-	      pageTitle: ''
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 	  }
 
 	  _createClass(Header, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      var _this2 = this;
-
-	      this.pubsub_token = _pubsubJs2.default.subscribe('setPageTitle', function (ev, title) {
-	        _this2.setState({ pageTitle: title });
-	      });
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      _pubsubJs2.default.unsubscribe(this.pubsub_token);
-	    }
-	  }, {
 	    key: '_toggleSidebar',
 	    value: function _toggleSidebar(e) {
 	      e.preventDefault();
@@ -39748,78 +39730,7 @@
 	          _react2.default.createElement(
 	            'h2',
 	            { className: 'header-title' },
-	            this.state.pageTitle
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'pull-right' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'a',
-	                { href: '#', className: 'ripple', onClick: this.showSearch },
-	                _react2.default.createElement('em', { className: 'ion-ios-search-strong' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              _reactBootstrap.Dropdown,
-	              { id: 'basic-nav-dropdown', pullRight: true, componentClass: 'li' },
-	              _react2.default.createElement(
-	                _reactBootstrap.Dropdown.Toggle,
-	                { useAnchor: true, noCaret: true, className: 'has-badge' },
-	                _react2.default.createElement('em', { className: 'ion-person' }),
-	                _react2.default.createElement(
-	                  'sup',
-	                  { className: 'badge bg-danger' },
-	                  '3'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                _reactBootstrap.Dropdown.Menu,
-	                { className: 'md-dropdown-menu' },
-	                _react2.default.createElement(
-	                  _reactRouterBootstrap.LinkContainer,
-	                  { to: 'pages/profile' },
-	                  _react2.default.createElement(
-	                    _reactBootstrap.MenuItem,
-	                    { eventKey: 3.1 },
-	                    _react2.default.createElement('em', { className: 'ion-home icon-fw' }),
-	                    'Profile'
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  _reactRouterBootstrap.LinkContainer,
-	                  { to: 'pages/messages' },
-	                  _react2.default.createElement(
-	                    _reactBootstrap.MenuItem,
-	                    { eventKey: 3.2 },
-	                    _react2.default.createElement('em', { className: 'ion-gear-a icon-fw' }),
-	                    'Messages'
-	                  )
-	                ),
-	                _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-	                _react2.default.createElement(
-	                  _reactRouterBootstrap.LinkContainer,
-	                  { to: '/login' },
-	                  _react2.default.createElement(
-	                    _reactBootstrap.MenuItem,
-	                    { eventKey: 3.3 },
-	                    _react2.default.createElement('em', { className: 'ion-log-out icon-fw' }),
-	                    'Logout'
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'a',
-	                { href: '#', className: 'ripple', onClick: this.showSettings },
-	                _react2.default.createElement('em', { className: 'ion-gear-b' })
-	              )
-	            )
+	            'Title'
 	          )
 	        )
 	      );
