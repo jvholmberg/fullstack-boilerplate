@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { ButtonToolbar, FormGroup } from 'react-bootstrap';
 
 import { register } from '../actions/user';
 
-import Navbar from '../components/Navbar/';
-import InputGroup from '../components/InputGroup/';
+import Header from '../components/Header/';
 
 @connect((store) => {
   return {
@@ -32,14 +32,19 @@ export default class Register extends React.Component {
   render() {
     return (
       <div className='container'>
-        <Navbar />
+        <Header />
         <h1>Register</h1>
         <form onSubmit={this._formSubmit}>
-          <InputGroup title='Name' name='displayName' />
-          <InputGroup title='Username' name='username' />
-          <InputGroup title='Password' name='password' />
-          <InputGroup title='Confirm Password' name='2assword' />
-          <button className='btn primary2'>Register</button>
+          <FormGroup>
+            <FormControl type='text' name='displayName' placeholder='Name' />
+            <FormControl type='text' name='username' placeholder='Username' />
+            <FormControl type='password' name='password' placeholder='Password' />
+            <FormControl type='password' name='password2' placeholder='Confirm Password' />
+          </FormGroup>
+          <ButtonToolbar>
+            <Button bsSize='small' bsStyle='primary'>Register</Button>
+            <Button bsSize='small'>Small button</Button>
+          </ButtonToolbar>
         </form>
       </div>
     );

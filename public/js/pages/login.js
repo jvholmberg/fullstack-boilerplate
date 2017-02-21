@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { ButtonToolbar, FormGroup } from 'react-bootstrap';
 
 import { login } from '../actions/user';
 
-import Navbar from '../components/Navbar/';
-import InputGroup from '../components/InputGroup/';
+import Header from '../components/Header/';
 
 @connect((store) => {
   return {
@@ -32,13 +32,18 @@ export default class Login extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Header />
         <div className='container'>
           <form onSubmit={this._formSubmit}>
             <h1>Login</h1>
-            <InputGroup title='Username' name='username' />
-            <InputGroup title='Password' name='password' />
-            <button className='btn btn-primary'>Login</button>
+            <FormGroup>
+              <FormControl type='text' name='username' placeholder='Username' />
+              <FormControl type='password' name='password' placeholder='Password' />
+            </FormGroup>
+            <ButtonToolbar>
+              <Button bsSize='small' bsStyle='primary'>Login</Button>
+              <Button bsSize='small'>Small button</Button>
+            </ButtonToolbar>
           </form>
         </div>
       </div>

@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'fullstack-boilerplate'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8000,
     db: 'mongodb://localhost/fullstack-boilerplate-development'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'fullstack-boilerplate'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8000,
     db: 'mongodb://localhost/fullstack-boilerplate-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'fullstack-boilerplate'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 8000,
     db: 'mongodb://localhost/fullstack-boilerplate-production'
   }
 };

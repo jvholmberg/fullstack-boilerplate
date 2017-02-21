@@ -6,7 +6,7 @@ var gulp = require('gulp')
   , webpack = require('webpack-stream');
 
 gulp.task('sass', function () {
-  gulp.src('./public/css/*.sass')
+  gulp.src('./public/css/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .pipe(gulp.dest('./public/css'))
@@ -14,7 +14,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./public/css/*.sass', ['sass']);
+  gulp.watch('./public/css/*.scss', ['sass']);
 });
 
 gulp.task('develop', function () {
@@ -56,8 +56,8 @@ gulp.task('babel', function() {
 });
 
 gulp.task('default', [
-  'sass',
   'develop',
   'babel',
+  'sass',
   'watch'
 ]);
