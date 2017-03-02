@@ -4,7 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as user from '../actions/user';
-import Navbar from '../components/Navbar/';
+import Header from '../components/Header/';
 
 @connect((store) => {
   return {
@@ -21,7 +21,7 @@ export default class Profile extends React.Component {
   render() {
     return (
       <div>
-        <Navbar user={this.props.user.user} />
+        <Header user={this.props.user.user} />
       </div>
     );
   }

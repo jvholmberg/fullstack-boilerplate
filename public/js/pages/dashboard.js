@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import * as user from '../actions/user';
 
-import Navbar from '../components/Navbar/';
+import Header from '../components/Header/';
 
 @connect((store) => {
   return {
@@ -21,7 +21,7 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Navbar user={this.props.user} />
+        <Header user={this.props.user} />
       </div>
     );
   }

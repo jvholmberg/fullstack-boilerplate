@@ -3,7 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Navbar from '../components/Navbar/';
+import Header from '../components/Header/';
 import { logout } from '../actions/user';
 
 @connect((store) => {
@@ -23,7 +23,7 @@ export default class Logout extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Header />
         Logout
       </div>
     );
