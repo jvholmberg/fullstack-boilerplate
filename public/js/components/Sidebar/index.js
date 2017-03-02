@@ -43,7 +43,6 @@ export default class Sidebar extends React.Component {
   }
 
   _getRoute(link, key) {
-    console.log(link);
     // Execute recursive if children exists
     var childNodes, childNodesExist;
     if (link.childNodes !== undefined) {
@@ -99,9 +98,7 @@ export default class Sidebar extends React.Component {
           </div>
           <nav className='sidebar-nav'>
             <ul>
-
               { this._populate() }
-
             </ul>
           </nav>
         </div>
